@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="421.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LecturerScreenController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0e9e77" height="305.0" layoutX="24.0" layoutY="68.0" stroke="#0e9e77" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="10.0" width="375.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6eb1eb" height="150.0" layoutX="24.0" layoutY="399.0" stroke="#6eb1eb" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="10.0" width="375.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#656668" height="26.0" layoutX="23.0" layoutY="16.0" stroke="#656668" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="10.0" width="375.0" />
+      <Circle fill="#0e9e77" layoutX="50.0" layoutY="420.0" radius="24.0" stroke="#0e9e77" strokeType="INSIDE" />
+      <Circle fill="#6eb1eb" layoutX="50.0" layoutY="96.0" radius="24.0" stroke="#6eb1eb" strokeType="INSIDE" />
+      <ImageView fitHeight="45.0" fitWidth="40.0" layoutX="29.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/chart.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="88.0" layoutY="409.0" text="Statistics" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="31.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/management2.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="88.0" layoutY="88.0" text="Management" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lecturerName" layoutX="64.0" layoutY="13.0" prefHeight="35.0" prefWidth="160.0" text="Welcome $Lecturer" textFill="#bcbcbc">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="createQuestion" layoutX="24.0" layoutY="128.0" mnemonicParsing="false" onAction="#createQuestionClick" prefHeight="45.0" prefWidth="375.0" style="-fx-background-radius: 5;" text="Manage question" textFill="#646464">
+         <effect>
+            <InnerShadow color="#0091ff" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="CreateTestButton" layoutX="24.0" layoutY="178.0" mnemonicParsing="false" onAction="#CreateTestClick" prefHeight="45.0" prefWidth="375.0" style="-fx-background-radius: 5;" text="Manage test" textFill="#646464">
+         <effect>
+            <InnerShadow color="#0091ff" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="24.0" layoutY="449.0" mnemonicParsing="false" onAction="#statisticsClicked" prefHeight="45.0" prefWidth="375.0" style="-fx-background-radius: 5;" text="Get statstical report" textFill="#646464">
+         <effect>
+            <InnerShadow color="#04754e" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="date" alignment="CENTER_RIGHT" layoutX="224.0" layoutY="13.0" prefHeight="35.0" prefWidth="82.0" text="DD/MM/YYYY" textFill="#cdcdcd">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="statusButton" layoutX="24.0" layoutY="228.0" mnemonicParsing="false" onAction="#statusClick" prefHeight="45.0" prefWidth="375.0" style="-fx-background-radius: 5;" text="Change test status" textFill="#646464">
+         <effect>
+            <InnerShadow color="#0091ff" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="checkTest" layoutX="24.0" layoutY="499.0" mnemonicParsing="false" onAction="#checkTestResults" prefHeight="45.0" prefWidth="375.0" style="-fx-background-radius: 5;" text="Check test result" textFill="#646464">
+         <effect>
+            <InnerShadow color="#04754e" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="45.0" fitWidth="40.0" layoutX="18.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/lecturer.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="logout" layoutX="313.0" layoutY="13.0" mnemonicParsing="false" onAction="#logoutClick" prefHeight="31.0" prefWidth="90.0" style="-fx-background-radius: 5;" text="Logout" textFill="#5e7ee6">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="-0.36" contrast="0.23" />
+         </effect>
+      </Button>
+      <Button fx:id="lockLiveTestButton" layoutX="24.0" layoutY="278.0" mnemonicParsing="false" onAction="#lockLiveTestClick" prefHeight="45.0" prefWidth="375.0" style="-fx-background-radius: 5;" text="Lock an active test" textFill="#646464">
+         <effect>
+            <InnerShadow color="#0091ff" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="changeDurTime" layoutX="24.0" layoutY="328.0" mnemonicParsing="false" onAction="#changeDurTimeClick" prefHeight="45.0" prefWidth="375.0" style="-fx-background-radius: 5;" text="Change an active test's duration time" textFill="#646464">
+         <effect>
+            <InnerShadow color="#0091ff" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="175.0" prefWidth="288.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.StudentTestStart">
+   <children>
+      <Button fx:id="Startbutton" layoutX="109.0" layoutY="120.0" mnemonicParsing="false" onAction="#Startbuttonclick" prefHeight="38.0" prefWidth="71.0" style="-fx-background-radius: 5;" text="Start" textFill="#479dff">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Label fx:id="DateLabel" layoutX="27.0" layoutY="20.0" text="05.06.2018" textFill="WHITE" />
+      <Label layoutX="29.0" layoutY="75.0" prefHeight="27.0" prefWidth="49.0" text="Enter ID" textFill="WHITE" />
+      <TextField fx:id="idTextField" layoutX="91.0" layoutY="76.0" />
+      <Label layoutX="208.0" layoutY="20.0" text="Goodluck :)" textFill="WHITE" />
+   </children>
+</AnchorPane>

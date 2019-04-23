@@ -1,0 +1,12 @@
+.jfx-text-field, .jfx-password-field, .jfx-text-area {
+    -fx-prompt-text-fill: #efefef;
+    -jfx-focus-color: #efefef;
+    -jfx-unfocus-color: #efefef;
+    -fx-text-inner-color:#efefef;
+}
+
+#dbCombo .list-cell
+ {
+    -fx-text-fill: #efefef;
+    -fx-background-color: gray; 
+ }

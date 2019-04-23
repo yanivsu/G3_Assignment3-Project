@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="257.0" prefWidth="421.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.StudentScreenController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#64156e" height="160.0" layoutX="24.0" layoutY="74.0" stroke="#64156e" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="10.0" width="375.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#656668" height="26.0" layoutX="23.0" layoutY="16.0" stroke="#656668" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="10.0" width="375.0" />
+      <Label layoutX="87.0" layoutY="88.0" text="Choose an option" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="WelcomeLabel" layoutX="64.0" layoutY="13.0" prefHeight="35.0" prefWidth="160.0" text="Welcome $Student" textFill="#bcbcbc">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="StartTestButton" layoutX="24.0" layoutY="128.0" mnemonicParsing="false" onAction="#startTestclick" prefHeight="45.0" prefWidth="375.0" style="-fx-background-radius: 5;" text="Start a test" textFill="#646464">
+         <effect>
+            <InnerShadow color="#f083ff" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="ViewGradesButton" layoutX="24.0" layoutY="178.0" mnemonicParsing="false" onAction="#ViewGradesClick" prefHeight="45.0" prefWidth="375.0" style="-fx-background-radius: 5;" text="View test" textFill="#646464">
+         <effect>
+            <InnerShadow color="#f083ff" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="DateLabel" alignment="CENTER_RIGHT" layoutX="224.0" layoutY="13.0" prefHeight="35.0" prefWidth="82.0" text="DD/MM/YYYY" textFill="#cdcdcd">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="45.0" fitWidth="40.0" layoutX="18.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/student.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="LogOutButton" layoutX="313.0" layoutY="13.0" mnemonicParsing="false" onAction="#LogOutClick" prefHeight="31.0" prefWidth="90.0" style="-fx-background-radius: 5;" text="Logout" textFill="#5e7ee6">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="-0.36" contrast="0.23" />
+         </effect>
+      </Button>
+      <ImageView fitHeight="48.0" fitWidth="82.0" layoutX="30.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/studentCircle.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

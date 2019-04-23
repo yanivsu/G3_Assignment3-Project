@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="684.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LecturerStatisticsController">
+   <children>
+      <ImageView fitHeight="77.0" fitWidth="73.0" layoutX="534.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/growth.png" />
+         </image>
+         <effect>
+            <Reflection />
+         </effect>
+      </ImageView>
+      <AnchorPane layoutX="25.0" layoutY="120.0" prefHeight="399.0" prefWidth="616.0" style="-fx-border-color: white; -fx-border-radius: 5;">
+         <children>
+            <BarChart fx:id="barChart" layoutX="5.0" layoutY="3.0" prefHeight="401.0" prefWidth="623.0">
+               <xAxis>
+                  <CategoryAxis prefHeight="27.0" prefWidth="566.0" side="BOTTOM" fx:id="xChart" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis fx:id="yChart" label="Grades" side="LEFT" tickLabelFill="WHITE" />
+               </yAxis>
+            </BarChart>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="25.0" layoutY="9.0" prefHeight="93.0" prefWidth="255.0" style="-fx-border-color: white; -fx-border-radius: 5;">
+         <children>
+            <Label layoutX="43.0" layoutY="9.0" prefHeight="17.0" prefWidth="39.0" text="Filter:" textFill="WHITE" />
+            <ComboBox fx:id="testCombo" layoutX="89.0" layoutY="5.0" onAction="#setTestNumberCombo" prefWidth="150.0" promptText="Choose Test" />
+            <ImageView fitHeight="35.0" fitWidth="29.0" layoutX="8.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/controls.png" />
+               </image>
+            </ImageView>
+            <ComboBox fx:id="testNumberCombo" layoutX="89.0" layoutY="43.0" onAction="#testNumberClicked" prefHeight="25.0" prefWidth="150.0" promptText="Choose test number" />
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="exitImage" fitHeight="25.0" fitWidth="29.0" layoutX="652.0" layoutY="5.0" onMouseClicked="#exitImageClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/x.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="gradesAnchor" layoutX="313.0" layoutY="9.0" prefHeight="93.0" prefWidth="158.0" style="-fx-border-color: white; -fx-border-radius: 5;">
+         <children>
+            <Label layoutX="13.0" layoutY="9.0" text="Average:" textFill="WHITE" />
+            <Label layoutX="13.0" layoutY="48.0" text="Median:" textFill="WHITE" />
+            <Label fx:id="averageLabel" layoutX="69.0" layoutY="9.0" text="100" textFill="WHITE" />
+            <Label fx:id="medianLabel" layoutX="69.0" layoutY="48.0" text="100" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

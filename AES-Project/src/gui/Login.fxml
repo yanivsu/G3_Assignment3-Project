@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="279.0" prefWidth="228.0" style="-fx-background-color: gray;" stylesheets="gui/createQuestionCSS.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+   <children>
+      <ImageView fitHeight="184.0" fitWidth="219.0" layoutX="29.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/logo.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="errorLabel" layoutX="29.0" layoutY="257.0" prefHeight="17.0" prefWidth="183.0" textFill="#790606">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="loginbutton" contentDisplay="RIGHT" depthTest="ENABLE" layoutX="32.0" layoutY="222.0" mnemonicParsing="false" onAction="#buttonClick" prefHeight="23.0" prefWidth="183.0" style="-fx-background-color: #78b2ff; -fx-background-radius: 10;" text="Login" textFill="#d4f8ff" wrapText="true">
+         <effect>
+            <InnerShadow color="#0faea6" />
+         </effect>
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/next.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="2.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/userIcon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="34.0" layoutX="2.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/pwIcon.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="userField" labelFloat="true" layoutX="35.0" layoutY="148.0" prefHeight="25.0" prefWidth="177.0" promptText="Username" />
+      <JFXPasswordField fx:id="pwField" labelFloat="true" layoutX="35.0" layoutY="187.0" pickOnBounds="false" prefHeight="25.0" prefWidth="177.0" promptText="Password" />
+      <ImageView fitHeight="32.0" fitWidth="55.0" layoutX="196.0" layoutY="4.0" onMouseClicked="#settingClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/settings.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="settingsPane" layoutX="11.0" layoutY="10.0" prefHeight="133.0" prefWidth="184.0" style="-fx-background-color: #666666; -fx-border-radius: 5; -fx-border-color: black;" visible="false">
+         <children>
+            <JFXTextField fx:id="ipField" layoutX="12.0" layoutY="32.0" prefHeight="25.0" prefWidth="152.0" promptText="Insert IP" />
+            <JFXTextField fx:id="portField" layoutX="12.0" layoutY="89.0" prefHeight="25.0" prefWidth="152.0" promptText="Insert Port" />
+            <Label layoutX="12.0" layoutY="14.0" text="IP:" textFill="#efefef" />
+            <Label layoutX="12.0" layoutY="65.0" text="Port:" textFill="#efefef" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

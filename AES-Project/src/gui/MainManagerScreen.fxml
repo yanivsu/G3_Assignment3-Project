@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="421.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ManagerController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#467d86" height="210.0" layoutX="24.0" layoutY="74.0" stroke="#467d86" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="10.0" width="375.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#44afc2" height="150.0" layoutX="24.0" layoutY="308.0" stroke="#44afc2" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="10.0" width="375.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#656668" height="26.0" layoutX="23.0" layoutY="16.0" stroke="#656668" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="10.0" width="375.0" />
+      <Circle fill="#467d86" layoutX="50.0" layoutY="329.0" radius="24.0" stroke="#467d86" strokeType="INSIDE" />
+      <Circle fill="#44afc2" layoutX="50.0" layoutY="96.0" radius="24.0" stroke="#44afc2" strokeType="INSIDE" />
+      <ImageView fitHeight="45.0" fitWidth="40.0" layoutX="29.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/chart.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="88.0" layoutY="317.0" text="Statistics" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="88.0" layoutY="88.0" text="Management" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="welcomeLabel" layoutX="64.0" layoutY="13.0" prefHeight="35.0" prefWidth="160.0" text="Welcome $Manager" textFill="#bcbcbc">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="viewQuestion" layoutX="24.0" layoutY="128.0" mnemonicParsing="false" onAction="#viewQuestions" prefHeight="45.0" prefWidth="375.0" style="-fx-background-radius: 5;" text="View Questions" textFill="#646464">
+         <effect>
+            <InnerShadow color="#872929" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="viewTestButton" layoutX="24.0" layoutY="178.0" mnemonicParsing="false" onAction="#viewTests" prefHeight="45.0" prefWidth="375.0" style="-fx-background-radius: 5;" text="View tests" textFill="#646464">
+         <effect>
+            <InnerShadow color="#872929" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="24.0" layoutY="358.0" mnemonicParsing="false" onAction="#statClicked" prefHeight="45.0" prefWidth="375.0" style="-fx-background-radius: 5;" text="Get statstical report" textFill="#646464">
+         <effect>
+            <InnerShadow color="#ffc37f" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="dateLabel" alignment="CENTER_RIGHT" layoutX="224.0" layoutY="13.0" prefHeight="35.0" prefWidth="82.0" text="DD/MM/YYYY" textFill="#cdcdcd">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="approveDenyButton" layoutX="24.0" layoutY="228.0" mnemonicParsing="false" onAction="#approveDenyClick" prefHeight="45.0" prefWidth="375.0" style="-fx-background-radius: 5;" text="Approve/Deny Requests" textFill="#646464">
+         <effect>
+            <InnerShadow color="#872929" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="checkTestButton" layoutX="24.0" layoutY="408.0" mnemonicParsing="false" onAction="#CheckTestResult" prefHeight="45.0" prefWidth="375.0" style="-fx-background-radius: 5;" text="Check test result" textFill="#646464">
+         <effect>
+            <InnerShadow color="#ffc37f" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="45.0" fitWidth="40.0" layoutX="18.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/manager.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="logOutButton" layoutX="313.0" layoutY="13.0" mnemonicParsing="false" onAction="#logOutClick" prefHeight="31.0" prefWidth="90.0" style="-fx-background-radius: 5;" text="Logout" textFill="#5e7ee6">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="-0.36" contrast="0.23" />
+         </effect>
+      </Button>
+      <ImageView fitHeight="60.0" fitWidth="51.0" layoutX="28.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/management.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
